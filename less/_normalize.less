@@ -23,7 +23,8 @@
   body {
     margin: 0;
     background: @bg-color-primary;
-    
+    color: @text-color-primary;
+    font-family: @font-primary;
   }
   
   /**
@@ -39,11 +40,56 @@
    * `article` contexts in Chrome, Firefox, and Safari.
    */
   
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25;
+    font-weight: 400;
   }
-  
+
+  h1 {
+    font-size: 3.125em;
+  }
+
+  h2 {
+    font-size: 2.188em;
+  }
+
+  h3 {
+    font-size: 1.563em;
+  }
+
+  h4 {
+    font-size: 1.375em;
+  }
+
+  h5 {
+    font-size: 1.25em;
+  }
+
+  h6 {
+    font-size: 1.125em;
+  }
+
+  /** Color num
+    */
+
+  ol {
+    list-style-type: none;
+    counter-reset: item;
+    line-height: 2.7;
+  }
+
+  ol li {
+    color: @text-color-secondary;
+  }
+
+  ol li::before {
+    content: counter(item) '.';
+    counter-increment: item;
+    color: @text-color-accent;
+    font-size: 1.25em;
+    padding-right: 15px;
+  }
+
   /* Grouping content
      ========================================================================== */
   
@@ -77,6 +123,7 @@
   
   a {
     background-color: transparent;
+    color: @text-color-secondary;
   }
   
   /**
@@ -351,3 +398,4 @@
   [hidden] {
     display: none;
   }
+
