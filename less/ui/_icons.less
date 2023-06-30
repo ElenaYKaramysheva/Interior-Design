@@ -3,67 +3,66 @@
 ================================================*/
 
 .icon {
+    .square(1.375rem);
     display: inline-block;
-    width: 1.375rem;
-    height: 1.375rem;
     background-color: @bg-color-tertiary;
     mask-size: contain;
     mask-position: 50% 50%;
     mask-repeat: no-repeat;
-}
 
-.icon--accent {
-    background-color: @bg-color-accent;
-}
-
-.icon--phone {
-    mask-image: url('/img/icons/icon_phone.svg');
-}
-
-.icon--arrow-corner {
-    mask-image: url('/img/icons/icon_arrow-corner.svg');
-}
-
-.icon--quote {
-    mask-image: url('/img/icons/icon_quote.svg');
-}
-
-.icon--earth {
-    mask-image: url('/img/icons/icon_earth.svg');
-}
-
-.icon--envelope {
-    mask-image: url('/img/icons/icon_envelope.svg');
-}
-
-.icon--arrow {
-    mask-image: url('/img/icons/icon_arrow.svg');
-}
-
-.icon--search {
-    background-color: @bg-color-search;
-    mask-image: url('/img/icons/icon_search.svg');
-}
-
-.icon--star {
-    background-color: @bg-color-star;
-    mask-image: url('/img/icons/icon_star.svg');
-}
-
-.icon--fb {
-    mask-image: url('/img/icons/icon_fb.svg');
-}
-
-.icon--tw {
-    mask-image: url('/img/icons/icon_tw.svg');
-}
-
-.icon--li {
-    mask-image: url('/img/icons/icon_li.svg');
-}
-
-.icon--inst {
-    mask-image: url('/img/icons/icon_inst.svg');
+    &--accent {
+        background-color: @bg-color-accent;
+    }
+    
+    &--phone {
+        mask-image: url('@{icon-path}/icon_phone.svg');
+    }
+    
+    &--arrow-corner {
+        mask-image: url('@{icon-path}/icon_arrow-corner.svg');
+    }
+    
+    &--quote {
+        mask-image: url('@{icon-path}/icon_quote.svg');
+    }
+    
+    &--earth {
+        mask-image: url('@{icon-path}/icon_earth.svg');
+    }
+    
+    &--envelope {
+        mask-image: url('@{icon-path}/icon_envelope.svg');
+    }
+    
+    &--arrow {
+        mask-image: url('@{icon-path}/icon_arrow.svg');
+    }
+    
+    &--search {
+        background-color: @bg-color-search;
+        mask-image: url('@{icon-path}/icon_search.svg');
+    }
+    
+    &--star {
+        background-color: @bg-color-star;
+        mask-image: url('@{icon-path}/icon_star.svg');
+    }
+    
+    &--fb {
+        mask-image: url('@{icon-path}/icon_fb.svg');
+    }
+    
+    &--tw {
+        mask-image: url('@{icon-path}/icon_tw.svg');
+    }
+    
+    &--li {
+        mask-image: url('@{icon-path}/icon_li.svg');
+    }
+    
+    &--inst {
+        mask-image: url('@{icon-path}/icon_inst.svg');
+    }
 }
 
 /*================================================
@@ -71,23 +70,23 @@
 ================================================*/
 
 .round-icon {
+    .square(4.375rem);
     background-color: @bg-color-secondary;
-    width: 4.375rem;
-    height: 4.375rem;
     border-radius: 50%;
     border: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    &--inverted {
+        background-color: @bg-color-primary;
+    }
+    
+    &--large {
+        .square(5.8125rem);
+    }
 }
 
-.round-icon--inverted {
-    background-color: @bg-color-primary;
-}
 
-.round-icon--large {
-    width: 5.8125rem;
-    height: 5.8125rem;
-}
 
 
