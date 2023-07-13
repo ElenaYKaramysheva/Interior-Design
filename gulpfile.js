@@ -25,9 +25,9 @@ function styles() {
 }
 
 function html() {
-    return src('./asset/templates/*.html')
+    return src('./hb/*.html')
         .pipe(hb()
-            .partials('./asset/templates/**/*.hbs')
+            .partials('./hb/**/*.hbs')
             .helpers('./asset/js/handlebars-helpers.js')
             .data('./asset/data/**/*.{js,json}')
         )
@@ -38,7 +38,7 @@ function html() {
 function startwatch() {
     // Мониторим файлы на изменения
     watch('./less/**/*.less', styles);
-    // watch('./asset/templates/**/**/*.(hbs|html)', html);
+    watch('./hb/**/**/*.(hbs|html)', html);
     // watch('./asset/js/**/*.js').on('change', browserSync.reload);
     // watch('./asset/data/**/*.json').on('change', browserSync.reload);
     watch('./*.html').on('change', browserSync.reload);
