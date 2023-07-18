@@ -19,7 +19,7 @@ html {
 body {
   margin: 0;
   background: #FFFFFF;
-  color: #292F36;
+  color: #4D5053;
   font-family: 'Jost', sans-serif;
 }
 /**
@@ -32,6 +32,10 @@ main {
    * Correct the font size and margin on `h1` elements within `section` and
    * `article` contexts in Chrome, Firefox, and Safari.
    */
+p {
+  letter-spacing: 0.01em;
+  font-size: 1.375rem;
+}
 h1,
 h2,
 h3,
@@ -41,6 +45,7 @@ h6 {
   line-height: 1.25;
   font-weight: 400;
   font-family: 'DM Serif Display', sans-serif;
+  color: #292F36;
 }
 h1 {
   font-size: 3.125rem;
@@ -68,14 +73,18 @@ ol {
   line-height: 2.7;
 }
 ol li {
-  color: #4D5053;
+  color: #292F36;
+  font-size: 1.375rem;
+  letter-spacing: 0.01em;
 }
 ol li::before {
   content: counter(item) '.';
   counter-increment: item;
   color: #CDA274;
   font-size: 1.25rem;
-  padding-right: 15px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  padding-right: 0.9375rem;
 }
 /* Grouping content
      ========================================================================== */
@@ -110,6 +119,7 @@ pre {
 a {
   background-color: transparent;
   color: #4D5053;
+  text-decoration: none;
 }
 /**
    * 1. Remove the bottom border in Chrome 57-
@@ -366,7 +376,7 @@ html {
 }
 body {
   background: #FFFFFF;
-  color: #292F36;
+  color: #4D5053;
   font-family: 'Jost', sans-serif;
 }
 .button {
@@ -374,7 +384,7 @@ body {
   color: #FFFFFF;
   font-weight: 600;
   font-size: 1.125rem;
-  padding: 10px 54px;
+  padding: 0px 3.375rem;
   border-radius: 1.125rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -386,7 +396,9 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  vertical-align: middle;
   letter-spacing: 0.02em;
+  line-height: 1.25;
   border: none;
   min-height: 4.6875rem;
   cursor: pointer;
