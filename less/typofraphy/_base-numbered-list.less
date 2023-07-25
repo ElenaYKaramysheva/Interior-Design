@@ -5,16 +5,15 @@
 }
 
 .base-numbered-list__item {
-    color: @text-color-secondary;
-    .text-size;
+    .base-text();
+    &::before {
+        content: counter(item) '.';
+        counter-increment: item;
+        color: @text-color-accent;
+        font-size: 1.25rem;
+        line-height: 1.25;
+        letter-spacing: 0.02rem;
+        margin-right: 0.9375rem;
+    }
 }
 
-.base-numbered-list__item::before {
-    content: counter(item) '.';
-    counter-increment: item;
-    color: @text-color-accent;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    letter-spacing: 0.02rem;
-    margin-right: 0.9375rem;
-}

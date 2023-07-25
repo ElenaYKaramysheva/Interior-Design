@@ -26,11 +26,6 @@
     color: @text-color-primary;
     font-family: @font-primary;
   }
-
-  * {
-    margin: 0;
-    padding: 0;
-  }
   
   /**
    * Render the `main` element consistently in IE.
@@ -39,7 +34,7 @@
   main {
     display: block;
   }
-  
+
   /**
    * Correct the font size and margin on `h1` elements within `section` and
    * `article` contexts in Chrome, Firefox, and Safari.
@@ -52,14 +47,16 @@
    h5:extend(.h5) {}
    h6:extend(.h6) {}
 
+   p {
+    .base-text();
+   }
+
   /** Color num
     */
 
-  ol:extend(.base-numbered-list) {}
-
-  ol li:extend(.base-numbered-list__item) {}
-
-  ol li::before:extend(.base-numbered-list__item::before) {}
+  ol:extend(.base-numbered-list)  {
+    li:extend(.base-numbered-list__item all) {}
+  }
 
   /* Grouping content
      ========================================================================== */

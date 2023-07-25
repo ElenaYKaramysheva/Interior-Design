@@ -22,10 +22,6 @@ body {
   color: #4D5053;
   font-family: 'Jost', sans-serif;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
 /**
    * Render the `main` element consistently in IE.
    */
@@ -36,6 +32,10 @@ main {
    * Correct the font size and margin on `h1` elements within `section` and
    * `article` contexts in Chrome, Firefox, and Safari.
    */
+p {
+  font-size: 1.375rem;
+  letter-spacing: 0.01rem;
+}
 /** Color num
     */
 /* Grouping content
@@ -467,25 +467,24 @@ body {
   width: 5.8125rem;
   height: 5.8125rem;
 }
-.input-name {
+.input-field {
   border: none;
   border-bottom: 1px solid #000000;
   background-color: transparent;
+  outline: none;
   font-size: 1.375rem;
   letter-spacing: 0.01rem;
-  min-width: 23.625rem;
   min-height: 2.8125rem;
-  outline: none;
 }
 .textarea-message {
-  resize: none;
-  min-width: 49.8125rem;
   border: none;
   border-bottom: 1px solid #000000;
   background-color: transparent;
+  outline: none;
   font-size: 1.375rem;
   letter-spacing: 0.01rem;
   color: #4D5053;
+  resize: none;
 }
 .h1,
 h1 {
@@ -493,6 +492,7 @@ h1 {
   font-weight: 400;
   font-family: 'DM Serif Display', sans-serif;
   color: #292F36;
+  margin: 1em 0.5em;
   font-size: 3.125rem;
 }
 .h2,
@@ -501,6 +501,7 @@ h2 {
   font-weight: 400;
   font-family: 'DM Serif Display', sans-serif;
   color: #292F36;
+  margin: 1em 0.5em;
   font-size: 2.188rem;
 }
 .h3,
@@ -509,6 +510,7 @@ h3 {
   font-weight: 400;
   font-family: 'DM Serif Display', sans-serif;
   color: #292F36;
+  margin: 1em 0.5em;
   font-size: 1.563rem;
 }
 .h4,
@@ -517,6 +519,7 @@ h4 {
   font-weight: 400;
   font-family: 'DM Serif Display', sans-serif;
   color: #292F36;
+  margin: 1em 0.5em;
   font-size: 1.375rem;
 }
 .h5,
@@ -525,6 +528,7 @@ h5 {
   font-weight: 400;
   font-family: 'DM Serif Display', sans-serif;
   color: #292F36;
+  margin: 1em 0.5em;
   font-size: 1.25rem;
 }
 .h6,
@@ -533,13 +537,14 @@ h6 {
   font-weight: 400;
   font-family: 'DM Serif Display', sans-serif;
   color: #292F36;
+  margin: 1em 0.5em;
   font-size: 1.125rem;
 }
 .base-text {
   font-size: 1.375rem;
   letter-spacing: 0.01rem;
 }
-.text-base p + p {
+p + p {
   margin-top: 2rem;
 }
 .base-numbered-list,
@@ -550,7 +555,6 @@ ol {
 }
 .base-numbered-list__item,
 ol li {
-  color: #292F36;
   font-size: 1.375rem;
   letter-spacing: 0.01rem;
 }
