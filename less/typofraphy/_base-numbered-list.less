@@ -1,0 +1,19 @@
+.base-numbered-list {
+    list-style-type: none;
+    counter-reset: item;
+    line-height: 2.7;
+}
+
+.base-numbered-list__item {
+    .base-text();
+    &::before {
+        content: counter(item) '.';
+        counter-increment: item;
+        color: @text-color-accent;
+        font-size: 1.25rem;
+        line-height: 1.25;
+        letter-spacing: 0.02rem;
+        margin-right: 0.9375rem;
+    }
+}
+
