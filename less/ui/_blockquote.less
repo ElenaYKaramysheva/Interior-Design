@@ -1,0 +1,25 @@
+.blockquote {
+    background-color: @bg-color-secondary;
+    border-radius: 3.125rem;
+    margin: 1.875rem 0 1.875rem;
+    min-height: 16.6875rem;
+    .flex-center();
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    
+}
+
+.blockquote::before {
+    position: absolute;
+    content: '';
+    &:extend(.icon, .icon--accent, .icon--quote-big);
+    top: 3.3125rem;
+}
+
+.blockquote__text {
+    .blockquote-text();
+    display: block;
+    text-align: center;
+    margin-top: 9rem;
+}
