@@ -7,14 +7,17 @@
     flex-direction: column;
     justify-content: start;
     position: relative;
-    
 }
 
 .blockquote::before {
     position: absolute;
     content: '';
-    &:extend(.icon, .icon--accent, .icon--quote-big);
+    &:extend(.icon);
     top: 3.3125rem;
+    .square(6.25rem);
+    mask-image: url('@{icon-path}/icon_quote_big.svg');
+    background-size: contain;
+    background-color: @bg-color-accent;
 }
 
 .blockquote__text {

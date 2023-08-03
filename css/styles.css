@@ -377,7 +377,8 @@ body {
                Icon
 ================================================*/
 .icon,
-.blockquote::before {
+.blockquote::before,
+blockquote::before {
   width: 1.375rem;
   height: 1.375rem;
   display: inline-block;
@@ -517,10 +518,17 @@ blockquote {
           justify-content: start;
   position: relative;
 }
-.blockquote::before {
+.blockquote::before,
+blockquote::before {
   position: absolute;
   content: '';
   top: 3.3125rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  -webkit-mask-image: url('/img/icons/icon_quote_big.svg');
+          mask-image: url('/img/icons/icon_quote_big.svg');
+  background-size: contain;
+  background-color: #CDA274;
 }
 .blockquote__text,
 blockquote p {
