@@ -1,28 +1,30 @@
 .blockquote {
+    .flex-center();
+    
     background-color: @bg-color-secondary;
     border-radius: 3.125rem;
     margin: 1.875rem 0 1.875rem;
     min-height: 16.6875rem;
-    .flex-center();
     flex-direction: column;
-    justify-content: start;
-    position: relative;
-}
 
-.blockquote::before {
-    position: absolute;
-    content: '';
-    &:extend(.icon);
-    top: 3.3125rem;
-    .square(6.25rem);
-    mask-image: url('@{icon-path}/icon_quote_big.svg');
-    background-size: contain;
-    background-color: @bg-color-accent;
+    &::before {
+        &:extend(.icon, .icon--quote-right);
+        .square(6.25rem);
+        
+        content: '';
+        top: 3.3125rem;
+        background-color: @bg-color-accent;
+    }
 }
 
 .blockquote__text {
-    .blockquote-text();
+    font-family: @font-secondary;
+    color: @text-color-accent;
+    font-style: italic;
+    font-size: 1.5625rem;
+    line-height: 1.25;
+    letter-spacing: 0.02rem;
     display: block;
     text-align: center;
-    margin-top: 9rem;
+    margin-top: 0;
 }

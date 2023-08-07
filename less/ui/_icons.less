@@ -13,62 +13,27 @@
     &--accent {
         background-color: @bg-color-accent;
     }
-    
-    &--phone {
-        mask-image: url('@{icon-path}/icon_phone.svg');
-    }
-    
-    &--arrow-corner {
-        mask-image: url('@{icon-path}/icon_arrow-corner.svg');
-    }
-    
-    &--quote {
-        mask-image: url('@{icon-path}/icon_quote.svg');
+
+    &--accent-star {
+        background-color: @bg-color-star;
     }
 
-    &--quote-big {
-        mask-image: url('@{icon-path}/icon_quote_big.svg');
+    &--accent-search {
+        background-color: @bg-color-search;
+    }
+
+    &--big {
         .square(6.25rem);
     }
-    
-    &--earth {
-        mask-image: url('@{icon-path}/icon_earth.svg');
-    }
-    
-    &--envelope {
-        mask-image: url('@{icon-path}/icon_envelope.svg');
-    }
-    
-    &--arrow {
-        mask-image: url('@{icon-path}/icon_arrow.svg');
-    }
-    
-    &--search {
-        background-color: @bg-color-search;
-        mask-image: url('@{icon-path}/icon_search.svg');
-    }
-    
-    &--star {
-        background-color: @bg-color-star;
-        mask-image: url('@{icon-path}/icon_star.svg');
-    }
-    
-    &--fb {
-        mask-image: url('@{icon-path}/icon_fb.svg');
-    }
-    
-    &--tw {
-        mask-image: url('@{icon-path}/icon_tw.svg');
-    }
-    
-    &--li {
-        mask-image: url('@{icon-path}/icon_li.svg');
-    }
-    
-    &--inst {
-        mask-image: url('@{icon-path}/icon_inst.svg');
-    }
 }
+
+@icon-types: phone, arrow-corner, quote-left, quote-right, earth, envelope, arrow, search, star, fb, tw, li, inst;
+
+each(@icon-types, {
+    .icon--@{value} {
+        mask-image: url('@{icon-path}/icon_@{value}.svg');
+    }
+});
 
 /*================================================
                Round-Icon
