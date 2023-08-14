@@ -55,7 +55,16 @@
     */
 
   ol:extend(.base-numbered-list)  {
-    li:extend(.base-numbered-list__item all) {}
+    li:extend(.base-numbered-list__item all) {} 
+  }
+
+  blockquote:extend(.blockquote all) {
+    p:extend(.blockquote__text) {}
+  }
+
+  figure:extend(.figure) {
+    img:extend(.figure__img) {}
+    figcaption:extend(.figure__caption) {}
   }
 
   /* Grouping content
