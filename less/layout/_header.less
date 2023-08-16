@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    &__wrapper {
+        display: flex;
+        gap: 1.875rem;
+        align-items: center;
+    }
+}
+
+.header__button {
+    border: none;
+    background-color: @bg-color-primary;
+    cursor: pointer;
+    
+    &:hover {
+        .icon--accent-search {
+            background-color: @bg-color-accent;
+        }
+    }
+}
