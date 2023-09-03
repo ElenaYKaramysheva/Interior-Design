@@ -1,9 +1,15 @@
 .base-unnumbered-list {
-    list-style-type: none;
+    .numbered-list();
+}
 
-    &__item {
-        text-align: center;
-        .base-text();
+.base-unnumbered-list__item {
+    .base-text();
+    
+    &::before {
+        .numbered-list-item();
+
+        content: '\2022';
+        font-weight: bold;
     }
 }
 

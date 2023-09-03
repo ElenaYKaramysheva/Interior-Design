@@ -638,28 +638,46 @@ ol li {
 }
 .base-numbered-list__item::before,
 ol li::before {
-  content: counter(item) '.';
-  counter-increment: item;
   color: #CDA274;
   font-size: 1.25rem;
   line-height: 1.25;
   letter-spacing: 0.02rem;
   margin-right: 0.9375rem;
+  content: counter(item) '.';
+  counter-increment: item;
 }
 .base-unnumbered-list,
 ul {
   list-style-type: none;
+  counter-reset: item;
+  line-height: 2.7;
+  padding: 0;
+  margin: 1.5rem 0;
 }
-.base-unnumbered-list__item {
-  text-align: center;
+.base-unnumbered-list__item,
+ul li {
   font-size: 1.375rem;
   letter-spacing: 0.01rem;
+}
+.base-unnumbered-list__item::before,
+ul li::before {
+  color: #CDA274;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: 0.02rem;
+  margin-right: 0.9375rem;
+  content: '\2022';
+  font-weight: bold;
 }
 .site-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2.8125rem;
+}
+.site-menu__item .base-unnumbered-list__item::before,
+.site-menu__item ul li::before {
+  content: none;
 }
 .site-menu__link {
   color: #292F36;
