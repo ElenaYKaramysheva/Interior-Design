@@ -1,15 +1,15 @@
 .base-numbered-list {
-    .numbered-list();
+    counter-reset: item;
+    .list-styles()
 }
 
 .base-numbered-list__item {
     .base-text();
     
     &::before {
-        .numbered-list-item();
+        .numbered-bullets();
 
-        content: counter(item) '.';
-        counter-increment: item;
+        .list-bullets-styles()
     }
 }
 

@@ -1,15 +1,14 @@
 .base-unnumbered-list {
-    .numbered-list();
+    .list-styles()
 }
 
 .base-unnumbered-list__item {
     .base-text();
     
     &::before {
-        .numbered-list-item();
+        .unnumbered-bullets();
 
-        content: '\2022';
-        font-weight: bold;
+        .list-bullets-styles();
     }
 }
 

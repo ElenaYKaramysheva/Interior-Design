@@ -625,8 +625,8 @@ p + p {
 }
 .base-numbered-list,
 ol {
-  list-style-type: none;
   counter-reset: item;
+  list-style-type: none;
   line-height: 2.7;
   padding: 0;
   margin: 1.5rem 0;
@@ -638,18 +638,17 @@ ol li {
 }
 .base-numbered-list__item::before,
 ol li::before {
+  content: counter(item) '.';
+  counter-increment: item;
   color: #CDA274;
   font-size: 1.25rem;
   line-height: 1.25;
   letter-spacing: 0.02rem;
   margin-right: 0.9375rem;
-  content: counter(item) '.';
-  counter-increment: item;
 }
 .base-unnumbered-list,
 ul {
   list-style-type: none;
-  counter-reset: item;
   line-height: 2.7;
   padding: 0;
   margin: 1.5rem 0;
@@ -661,13 +660,13 @@ ul li {
 }
 .base-unnumbered-list__item::before,
 ul li::before {
+  content: '\2022';
+  font-weight: bold;
   color: #CDA274;
   font-size: 1.25rem;
   line-height: 1.25;
   letter-spacing: 0.02rem;
   margin-right: 0.9375rem;
-  content: '\2022';
-  font-weight: bold;
 }
 .site-menu {
   display: -webkit-box;
@@ -712,6 +711,9 @@ ul li::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header__wrapper-menu {
   display: -webkit-box;
