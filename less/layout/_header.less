@@ -1,0 +1,32 @@
+.header {
+    height: 8.6875rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__wrapper-menu {
+    display: flex;
+    gap: 1.875rem;
+    align-items: center;
+}
+
+.header__button {
+    border: none;
+    background-color: @bg-color-primary;
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    .header__button:hover {
+        .icon--accent-search {
+            background-color: @bg-color-accent;
+        }
+    }
+}

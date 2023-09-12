@@ -20,3 +20,34 @@
     align-items: center;
     justify-content: center;
 }
+
+.list-styles() {
+    list-style-type: none;
+    line-height: 2.7;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.list-bullets-styles() {
+    color: @text-color-accent;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    letter-spacing: 0.02rem;
+    margin-right: 0.9375rem;
+}
+
+.numbered-bullets() {
+    content: counter(item) '.';
+    counter-increment: item;
+}
+
+.unnumbered-bullets() {
+    content: '\2022';
+    font-weight: bold;
+}
+
+.reset-unnumbered-bullets() {
+    .base-unnumbered-list__item::before {
+        content: none;
+    }
+}
